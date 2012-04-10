@@ -1,0 +1,5 @@
+c:\Users\miso\Documents\Visual Studio 2010\Projects\ParseHTML\StringUtil\Bin\Debug\StringUtil.dll
+c:\Users\miso\Documents\Visual Studio 2010\Projects\ParseHTML\StringUtil\Bin\Debug\StringUtil.pdb
+c:\Users\miso\Documents\Visual Studio 2010\Projects\ParseHTML\StringUtil\obj\Debug\ResolveAssemblyReference.cache
+c:\Users\miso\Documents\Visual Studio 2010\Projects\ParseHTML\StringUtil\obj\Debug\StringUtil.dll
+c:\Users\miso\Documents\Visual Studio 2010\Projects\ParseHTML\StringUtil\obj\Debug\StringUtil.pdb
