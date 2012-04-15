@@ -105,6 +105,10 @@
     <Content Include="SplashScreenImage.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SeibuBusLib\SeibuBusLib.csproj">
+      <Project>{800CE00C-93AC-4517-8F8F-C9922C1FBEF0}</Project>
+      <Name>SeibuBusLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\StringUtil\StringUtil.csproj">
       <Project>{00407B0A-028C-4FB2-A72D-69DDEEEF890D}</Project>
       <Name>StringUtil</Name>

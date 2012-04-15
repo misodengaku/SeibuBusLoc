@@ -2,6 +2,7 @@
   <Deployment.Parts>
     <AssemblyPart x:Name="バスで来た。" Source="バスで来た。.dll" />
     <AssemblyPart x:Name="Microsoft.Phone.Controls.Toolkit" Source="Microsoft.Phone.Controls.Toolkit.dll" />
+    <AssemblyPart x:Name="SeibuBusLib" Source="SeibuBusLib.dll" />
     <AssemblyPart x:Name="SgmlReader.WP7" Source="SgmlReader.WP7.dll" />
     <AssemblyPart x:Name="StringUtil" Source="StringUtil.dll" />
     <AssemblyPart x:Name="Microsoft.Phone.Controls" Source="Microsoft.Phone.Controls.dll" />

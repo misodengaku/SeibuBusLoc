@@ -131,9 +131,10 @@
 
         <!--ContentPanel - 追加コンテンツをここに入力します-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <ScrollViewer HorizontalAlignment="Left" VerticalAlignment="Top">
-                <ListBox x:Name="timeInfoList" DataContext="{Binding}" ItemContainerStyle="{StaticResource ListBoxItemStyle1}" Style="{StaticResource ListBoxStyle1}" ItemTemplate="{StaticResource DataTemplate1}" SelectionMode="Extended"/>
+            <ScrollViewer HorizontalAlignment="Left" VerticalAlignment="Top" MinWidth="456" Width="448" Height="602">
+                <ListBox x:Name="timeInfoList" DataContext="{Binding}" ItemContainerStyle="{StaticResource ListBoxItemStyle1}" Style="{StaticResource ListBoxStyle1}" ItemTemplate="{StaticResource DataTemplate1}" SelectionMode="Extended" MinWidth="400" MinHeight="470" Width="456" Height="470" HorizontalAlignment="Left" />
             </ScrollViewer>
+            <Button Content="タイルを作成" Margin="8,0,0,0" VerticalAlignment="Bottom" Click="Button_Click" />
         </Grid>
     </Grid>
 

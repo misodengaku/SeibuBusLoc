@@ -57,7 +57,6 @@
                     <TextBox Height="72" Margin="0,39,0,0" Name="textBox1" Text="" VerticalAlignment="Top" />
                     <TextBox Height="72" Margin="0,146,0,0" Name="textBox2" Text="" VerticalAlignment="Top" />
                     <Button Content="検索" Margin="0,222,0,0" Name="button1" Click="button1_Click" Height="72" VerticalAlignment="Top" />
-                    <Button Content="タイルを作成" Margin="0,298,0,299" d:LayoutOverrides="Width, Height" Name="makeTile" IsEnabled="False" />
                     <TextBlock HorizontalAlignment="Left" Margin="12,8,0,0" TextWrapping="Wrap" Text="停留所名" VerticalAlignment="Top"/>
                     <TextBlock HorizontalAlignment="Left" Margin="12,115,0,0" TextWrapping="Wrap" Text="行き先" VerticalAlignment="Top"/>
                 </Grid>

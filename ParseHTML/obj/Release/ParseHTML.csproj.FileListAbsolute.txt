@@ -21,3 +21,5 @@ c:\Users\miso\Documents\Visual Studio 2010\Projects\ParseHTML\ParseHTML\obj\Rele
 c:\Users\miso\Documents\Visual Studio 2010\Projects\ParseHTML\ParseHTML\obj\Release\バスで来た。.dll
 c:\Users\miso\Documents\Visual Studio 2010\Projects\ParseHTML\ParseHTML\obj\Release\バスで来た。.pdb
 c:\Users\miso\Documents\Visual Studio 2010\Projects\ParseHTML\ParseHTML\obj\Release\XapCacheFile.xml
+C:\Users\miso\Documents\Visual Studio 2010\Projects\ParseHTML\ParseHTML\Bin\Release\SeibuBusLib.dll
+C:\Users\miso\Documents\Visual Studio 2010\Projects\ParseHTML\ParseHTML\Bin\Release\SeibuBusLib.pdb
