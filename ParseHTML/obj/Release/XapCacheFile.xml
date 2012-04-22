@@ -1,12 +1,12 @@
-﻿<xapCache source="C:\Users\miso\Documents\Visual Studio 2010\Projects\ParseHTML\ParseHTML\Bin\Release\BusInfo.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="2012/04/12 8:42:45">
+﻿<xapCache source="C:\Users\miso\Documents\Visual Studio 2010\Projects\ParseHTML\ParseHTML\Bin\Release\BusInfo.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="2012/04/22 19:07:45">
   <file source="C:\Users\miso\Documents\Visual Studio 2010\Projects\ParseHTML\ParseHTML\Bin\Release\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="2012/04/01 1:17:38" />
   <file source="C:\Users\miso\Documents\Visual Studio 2010\Projects\ParseHTML\ParseHTML\bustile_big.png" archivePath="bustile_big.png" lastWriteTime="2012/03/31 17:35:50" />
   <file source="C:\Users\miso\Documents\Visual Studio 2010\Projects\ParseHTML\ParseHTML\bustile_tile_small.png" archivePath="bustile_tile_small.png" lastWriteTime="2012/03/31 17:35:50" />
-  <file source="C:\Users\miso\Documents\Visual Studio 2010\Projects\ParseHTML\ParseHTML\obj\Release\バスで来た。.dll" archivePath="バスで来た。.dll" lastWriteTime="2012/04/12 8:42:43" />
+  <file source="C:\Users\miso\Documents\Visual Studio 2010\Projects\ParseHTML\ParseHTML\obj\Release\バスで来た。.dll" archivePath="バスで来た。.dll" lastWriteTime="2012/04/22 19:07:44" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v7.1\Toolkit\Oct11\Bin\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="2011/10/06 11:33:14" />
-  <file source="C:\Users\miso\Documents\Visual Studio 2010\Projects\ParseHTML\SeibuBusLib\Bin\Release\SeibuBusLib.dll" archivePath="SeibuBusLib.dll" lastWriteTime="2012/04/12 7:34:54" />
-  <file source="C:\Users\miso\Documents\Visual Studio 2010\Library\SgmlReader.SL\SgmlReader.WP7\SgmlReader.WP7.dll" archivePath="SgmlReader.WP7.dll" lastWriteTime="2012/01/10 4:06:02" />
-  <file source="C:\Users\miso\Documents\Visual Studio 2010\Projects\ParseHTML\StringUtil\Bin\Release\StringUtil.dll" archivePath="StringUtil.dll" lastWriteTime="2012/03/31 6:02:07" />
+  <file source="C:\Users\miso\Documents\Visual Studio 2010\Projects\ParseHTML\SeibuBusLib\Bin\Release\SeibuBusLib.dll" archivePath="SeibuBusLib.dll" lastWriteTime="2012/04/22 18:49:10" />
+  <file source="C:\Users\miso\Documents\Visual Studio 2010\Projects\ParseHTML\ParseHTML\Bin\Release\SgmlReader.WP7.dll" archivePath="SgmlReader.WP7.dll" lastWriteTime="2012/01/10 4:06:02" />
+  <file source="C:\Users\miso\Documents\Visual Studio 2010\Projects\ParseHTML\StringUtil\Bin\Release\StringUtil.dll" archivePath="StringUtil.dll" lastWriteTime="2012/04/15 22:17:18" />
   <file source="C:\Program Files (x86)\Microsoft SDKs\Windows Phone\v7.1\Libraries\Silverlight\Microsoft.Phone.Controls.dll" archivePath="Microsoft.Phone.Controls.dll" lastWriteTime="2012/03/19 16:29:06" />
   <file source="C:\Users\miso\Documents\Visual Studio 2010\Projects\ParseHTML\ParseHTML\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="2012/03/28 21:20:33" />
   <file source="C:\Users\miso\Documents\Visual Studio 2010\Projects\ParseHTML\ParseHTML\Background.png" archivePath="Background.png" lastWriteTime="2012/03/28 21:20:33" />

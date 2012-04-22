@@ -23,10 +23,9 @@ namespace ParseHTML
                 return;
             if (!Microsoft.Phone.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
             {
-                MessageBox.Show("ネットワークに接続していません");
+                MessageBox.Show("ネットワークに接続していません", "エラー", MessageBoxButton.OK);
                 return;
             }
-            //MessageBox.Show(""+StringUtil.UrlEncode("朝霞駅", sjisEncoding));
             if (textBox1.Text.Length == 0 || textBox2.Text.Length == 0)
             {
                 MessageBox.Show("停留所名を入力してください", "エラー", MessageBoxButton.OK);
@@ -37,7 +36,8 @@ namespace ParseHTML
             textBox2.IsReadOnly = true;
             clickFlag = true;
 
-            Location.SearchRoute(textBox1.Text, textBox2.Text, delegate(List<BusInfo> bus){
+            Location busObj = new Location();
+            busObj.SearchRoute(textBox1.Text, textBox2.Text, delegate(List<BusInfo> bus){
                 PhoneApplicationService.Current.State["Route"] = textBox1.Text + "→" + textBox2.Text;
                 PhoneApplicationService.Current.State["Arr"] = textBox2.Text;
                 PhoneApplicationService.Current.State["Dep"] = textBox1.Text;
@@ -46,7 +46,11 @@ namespace ParseHTML
                 clickFlag = false;
                 NavigationService.Navigate(new Uri("/Result.xaml", UriKind.RelativeOrAbsolute));
             }, delegate(Exception ex){
-                MessageBox.Show("Exception "+ ex.Message);
+                ShowStatusBar(false);
+                textBox1.IsReadOnly = false;
+                textBox2.IsReadOnly = false;
+                clickFlag = false;
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButton.OK);
             });
              
             
