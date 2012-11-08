@@ -36,8 +36,7 @@ namespace SeibuBus
             textBox2.IsReadOnly = true;
             clickFlag = true;
 
-            Location busObj = new Location();
-            busObj.SearchRoute(textBox1.Text, textBox2.Text, delegate(List<BusInfo> bus){
+            Location.SearchRoute(textBox1.Text, textBox2.Text, delegate(List<BusInfo> bus){
                 PhoneApplicationService.Current.State["Route"] = textBox1.Text + "→" + textBox2.Text;
                 PhoneApplicationService.Current.State["Arr"] = textBox2.Text;
                 PhoneApplicationService.Current.State["Dep"] = textBox1.Text;
@@ -46,16 +45,16 @@ namespace SeibuBus
                 clickFlag = false;
                 NavigationService.Navigate(new Uri("/Result.xaml", UriKind.RelativeOrAbsolute));
             }, delegate(Exception ex){
-                ShowStatusBar(false);
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButton.OK);
                 textBox1.IsReadOnly = false;
                 textBox2.IsReadOnly = false;
+                ShowStatusBar(false);
                 clickFlag = false;
-                MessageBox.Show(ex.Message, "エラー", MessageBoxButton.OK);
             });
              
             
         }
-
+        #region StatusBar
         private void ShowStatusBar(string mes)
         {
             ProgressIndicator sysProg = new ProgressIndicator();
@@ -88,7 +87,7 @@ namespace SeibuBus
             sysProg.IsVisible = isShow;
             SystemTray.SetProgressIndicator(this, sysProg);
         }
-
+        #endregion
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
             if (e.NavigationMode == System.Windows.Navigation.NavigationMode.New)
@@ -117,6 +116,13 @@ namespace SeibuBus
 
             base.OnNavigatedTo(e);
 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var t = textBox1.Text;
+            textBox1.Text = textBox2.Text;
+            textBox2.Text = t;
         }
     }
 

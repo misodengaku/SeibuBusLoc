@@ -1,0 +1,10 @@
+﻿<SeibuBusLib:BusInfo xmlns:SeibuBusLib="clr-namespace:SeibuBusLib;assembly=SeibuBusLib" 
+	ArrEst="12:50" 
+    Dest="大泉学園駅北口（緑が丘経由）" 
+    DepEst="12:55" 
+    EstMes="約19分で発車します" 
+    Platform="サンプル乗り場" 
+    Route="泉３２" 
+    Type="1ステップバス" 
+    Timetable="12:54"
+/>

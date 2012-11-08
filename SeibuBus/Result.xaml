@@ -6,37 +6,12 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
-    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    mc:Ignorable="d" d:DesignHeight="696" d:DesignWidth="480"
     shell:SystemTray.IsVisible="True">
-
-
-    <!-- ページに遷移してくる時のアニメーション -->
-    <toolkit:TransitionService.NavigationInTransition>
-        <toolkit:NavigationInTransition>
-            <toolkit:NavigationInTransition.Backward>
-                <toolkit:TurnstileTransition Mode="BackwardIn"/>
-            </toolkit:NavigationInTransition.Backward>
-            <toolkit:NavigationInTransition.Forward>
-                <toolkit:TurnstileTransition Mode="ForwardIn"/>
-            </toolkit:NavigationInTransition.Forward>
-        </toolkit:NavigationInTransition>
-    </toolkit:TransitionService.NavigationInTransition>
-    <!-- 別ページへ遷移する時のアニメーション -->
-    <toolkit:TransitionService.NavigationOutTransition>
-        <toolkit:NavigationOutTransition>
-            <toolkit:NavigationOutTransition.Backward>
-                <toolkit:TurnstileTransition Mode="BackwardOut"/>
-            </toolkit:NavigationOutTransition.Backward>
-            <toolkit:NavigationOutTransition.Forward>
-                <toolkit:TurnstileTransition Mode="ForwardOut"/>
-            </toolkit:NavigationOutTransition.Forward>
-        </toolkit:NavigationOutTransition>
-    </toolkit:TransitionService.NavigationOutTransition>
 
     <phone:PhoneApplicationPage.Resources>
         <Style x:Key="ListBoxItemStyle1" TargetType="ListBoxItem">
@@ -95,30 +70,30 @@
             </Setter>
         </Style>
         <DataTemplate x:Key="DataTemplate1">
-            <Grid>
-                <TextBlock TextWrapping="Wrap" Text="{Binding Route}" FontSize="32" VerticalAlignment="Top" HorizontalAlignment="Left" Height="43">
+            <Grid HorizontalAlignment="Right" d:DataContext="{d:DesignData /SampleData/BusInfoSampleData.xaml}" Width="456">
+                <TextBlock x:Name="系統" TextWrapping="Wrap" Text="{Binding Route}" FontSize="32" VerticalAlignment="Top" HorizontalAlignment="Left" Height="43" FontFamily="Yu Gothic">
 					<TextBlock.Foreground>
 						<SolidColorBrush Color="{StaticResource PhoneAccentColor}"/>
 					</TextBlock.Foreground>
                 </TextBlock>
-                <TextBlock Margin="100,0,0,0" Text="{Binding Dest}" FontSize="32" VerticalAlignment="Top">
+                <TextBlock x:Name="行き先" Margin="100,0,0,0" Text="{Binding Dest}" FontSize="32" VerticalAlignment="Top" FontFamily="Yu Gothic" Height="43">
 					<TextBlock.Foreground>
 						<SolidColorBrush Color="{StaticResource PhoneAccentColor}"/>
 					</TextBlock.Foreground>
                 </TextBlock>
-                <TextBlock Margin="0,47,2,0" TextWrapping="Wrap" Text="{Binding EstMes}" VerticalAlignment="Top" FontSize="24" TextAlignment="Right"/>
-                <TextBlock HorizontalAlignment="Right" Margin="0,79,50,0" TextWrapping="Wrap" Text="バス到着予測：" VerticalAlignment="Top"/>
-                <TextBlock Margin="0,79,2,0" TextWrapping="Wrap" Text="{Binding DepEst}" VerticalAlignment="Top" HorizontalAlignment="Right" Width="48"/>
-                <TextBlock HorizontalAlignment="Right" Margin="0,106,50,0" TextWrapping="Wrap" Text="目的地到着予測：" VerticalAlignment="Top"/>
-                <TextBlock Margin="0,106,2,0" TextWrapping="Wrap" Text="{Binding ArrEst}" HorizontalAlignment="Right" Width="48" d:LayoutOverrides="Height" VerticalAlignment="Top"/>
-                <TextBlock HorizontalAlignment="Right" Margin="0,168,2,0" TextWrapping="Wrap" Text="{Binding Type}" VerticalAlignment="Top"/>
-                <TextBlock Margin="290,137,0,0" TextWrapping="Wrap" Text="{Binding Platform}" VerticalAlignment="Top"/>
+                <TextBlock x:Name="残り時間" Margin="0,47,2,0" TextWrapping="Wrap" Text="{Binding EstMes}" VerticalAlignment="Top" FontSize="24" TextAlignment="Right" FontFamily="Yu Gothic" Height="32"/>
+                <TextBlock x:Name="到着予測" Margin="0,83,61,0" TextWrapping="Wrap" Text="バス到着予測：" FontFamily="Yu Gothic" Height="27" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+                <TextBlock x:Name="到着予測時刻" Margin="0,83,8,0" Text="{Binding DepEst}" HorizontalAlignment="Right" Width="59" FontFamily="Yu Gothic" TextAlignment="Right" Height="27" VerticalAlignment="Top"/>
+                <TextBlock x:Name="目的地到着予測" HorizontalAlignment="Right" Margin="0,110,61,0" TextWrapping="Wrap" Text="目的地到着予測：" VerticalAlignment="Top" FontFamily="Yu Gothic" Height="27" d:LayoutOverrides="VerticalAlignment"/>
+                <TextBlock x:Name="目的地到着予測時刻" Margin="0,110,8,0" Text="{Binding ArrEst}" HorizontalAlignment="Right" Width="59" VerticalAlignment="Top" FontFamily="Yu Gothic" Height="27" TextAlignment="Right"/>
+                <TextBlock x:Name="バスタイプ" HorizontalAlignment="Right" Margin="0,172,7,0" TextWrapping="Wrap" Text="{Binding Type}" VerticalAlignment="Top" FontFamily="Yu Gothic" Height="30"/>
+                <TextBlock x:Name="のりば" Margin="0,141,8,0" TextWrapping="Wrap" Text="{Binding Platform}" VerticalAlignment="Top" FontFamily="Yu Gothic" Height="31" HorizontalAlignment="Right"/>
             </Grid>
         </DataTemplate>
     </phone:PhoneApplicationPage.Resources>
 
     <!--LayoutRoot は、すべてのページ コンテンツが配置されるルート グリッドです-->
-    <Grid x:Name="LayoutRoot" Background="Transparent" d:DataContext="{d:DesignData /SampleData/BusInfoSampleData.xaml}">
+    <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -131,23 +106,17 @@
 
         <!--ContentPanel - 追加コンテンツをここに入力します-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <ScrollViewer HorizontalAlignment="Left" VerticalAlignment="Top" MinWidth="456" Width="448" Height="602">
-                <ListBox x:Name="timeInfoList" DataContext="{Binding}" ItemContainerStyle="{StaticResource ListBoxItemStyle1}" Style="{StaticResource ListBoxStyle1}" ItemTemplate="{StaticResource DataTemplate1}" SelectionMode="Extended" MinWidth="400" MinHeight="470" Width="456" Height="470" HorizontalAlignment="Left" />
-            </ScrollViewer>
-            <Button Content="タイルを作成" Margin="8,0,0,0" VerticalAlignment="Bottom" Click="Button_Click" />
+            <ListBox x:Name="timeInfoList" DataContext="{Binding}" ItemContainerStyle="{StaticResource ListBoxItemStyle1}" Style="{StaticResource ListBoxStyle1}" ItemTemplate="{StaticResource DataTemplate1}" SelectionMode="Extended" MinWidth="400" MinHeight="470" Margin="0" />
         </Grid>
     </Grid>
 
     <!--ApplicationBar の使用法を示すサンプル コード-->
-    <!--<phone:PhoneApplicationPage.ApplicationBar>
+    <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
-            <shell:ApplicationBar.MenuItems>
-                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
-                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
-            </shell:ApplicationBar.MenuItems>
+            <shell:ApplicationBarIconButton IconUri="/icons/appbar.back.rest.png" Text="逆方向" x:Name="backButton" Click="backButton_Click" />
+            <shell:ApplicationBarIconButton IconUri="/icons/appbar.sync.rest.png" Text="更新" x:Name="updateButton" Click="updateButton_Click" />
+            <shell:ApplicationBarIconButton IconUri="/icons/appbar.download.rest.png" Text="タイル作成" x:Name="makeTileButton" Click="Button_Click" />
         </shell:ApplicationBar>
-    </phone:PhoneApplicationPage.ApplicationBar>-->
+    </phone:PhoneApplicationPage.ApplicationBar>
 
 </phone:PhoneApplicationPage>

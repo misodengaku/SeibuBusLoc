@@ -4,7 +4,6 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
-    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
@@ -15,29 +14,6 @@
     shell:SystemTray.IsVisible="True"
     >
 
-
-    <!-- ページに遷移してくる時のアニメーション -->
-    <toolkit:TransitionService.NavigationInTransition>
-        <toolkit:NavigationInTransition>
-            <toolkit:NavigationInTransition.Backward>
-                <toolkit:TurnstileTransition Mode="BackwardIn"/>
-            </toolkit:NavigationInTransition.Backward>
-            <toolkit:NavigationInTransition.Forward>
-                <toolkit:TurnstileTransition Mode="ForwardIn"/>
-            </toolkit:NavigationInTransition.Forward>
-        </toolkit:NavigationInTransition>
-    </toolkit:TransitionService.NavigationInTransition>
-    <!-- 別ページへ遷移する時のアニメーション -->
-    <toolkit:TransitionService.NavigationOutTransition>
-        <toolkit:NavigationOutTransition>
-            <toolkit:NavigationOutTransition.Backward>
-                <toolkit:TurnstileTransition Mode="BackwardOut"/>
-            </toolkit:NavigationOutTransition.Backward>
-            <toolkit:NavigationOutTransition.Forward>
-                <toolkit:TurnstileTransition Mode="ForwardOut"/>
-            </toolkit:NavigationOutTransition.Forward>
-        </toolkit:NavigationOutTransition>
-    </toolkit:TransitionService.NavigationOutTransition>
 
     <!--LayoutRoot は、すべてのページ コンテンツが配置されるルート グリッドです-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
@@ -53,15 +29,14 @@
 
         <!--ContentPanel - 追加コンテンツをここに入力します-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <ScrollViewer>
-                <Grid>
-                    <TextBox Height="72" Margin="0,39,0,0" Name="textBox1" Text="" VerticalAlignment="Top" />
-                    <TextBox Height="72" Margin="0,146,0,0" Name="textBox2" Text="" VerticalAlignment="Top" />
-                    <Button Content="検索" Margin="0,222,0,0" Name="button1" Click="button1_Click" Height="72" VerticalAlignment="Top" />
-                    <TextBlock HorizontalAlignment="Left" Margin="12,8,0,0" TextWrapping="Wrap" Text="停留所名" VerticalAlignment="Top"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="12,115,0,0" TextWrapping="Wrap" Text="行き先" VerticalAlignment="Top"/>
-                </Grid>
-            </ScrollViewer>
+            <Grid d:LayoutOverrides="Width, Height">
+            	<TextBox Height="72" Margin="0,39,0,0" x:Name="textBox1" Text="" VerticalAlignment="Top" FontFamily="Yu Gothic" />
+            	<TextBox Height="72" Margin="0,183,0,0" x:Name="textBox2" Text="" VerticalAlignment="Top" FontFamily="Yu Gothic" />
+            	<Button Content="検索" Margin="0,255,0,0" x:Name="button1" Click="button1_Click" Height="72" VerticalAlignment="Top" FontFamily="Yu Gothic" />
+            	<TextBlock HorizontalAlignment="Left" Margin="12,8,0,0" TextWrapping="Wrap" Text="停留所名" VerticalAlignment="Top" FontFamily="Yu Gothic" Height="31"/>
+            	<TextBlock HorizontalAlignment="Left" Margin="12,152,0,0" TextWrapping="Wrap" Text="行き先" VerticalAlignment="Top" FontFamily="Yu Gothic" Height="27"/>
+            	<Button Content="入れ替え" HorizontalAlignment="Right" Margin="0,111,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic" Height="72" Click="Button_Click" />
+            </Grid>
         </Grid>
     </Grid>
 
